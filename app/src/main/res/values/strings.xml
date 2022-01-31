@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KotlinHW2</string>
+    <string name="shuffle">shuffle</string>
+    <string name="add">add</string>
+</resources>
