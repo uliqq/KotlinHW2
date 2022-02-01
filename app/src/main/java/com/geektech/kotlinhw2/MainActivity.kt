@@ -2,6 +2,7 @@ package com.geektech.kotlinhw2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import com.geektech.kotlinhw2.databinding.ActivityMainBinding
 import com.geektech.kotlinhw2.extensions.load
 import com.geektech.kotlinhw2.extensions.showToast
@@ -36,11 +37,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun setImageUrl() {
         val url = binding.etEdit.text.toString()
-        if (url.isNotEmpty()){
+        if (url.isNotEmpty() && Patterns.WEB_URL.matcher(binding.etEdit.text).matches()){
             list.add(url)
             binding.etEdit.setText("")
         } else {
-            showToast("SET A LINK")
+            showToast("SET A RIGHT LINK")
         }
     }
 
